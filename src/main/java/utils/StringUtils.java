@@ -10,10 +10,11 @@ public class StringUtils {
 
     /**
      * 判断字符串是否包含中文字符
+     *
      * @param content 字符串
      * @return 是否包含中文字符
      */
-    public static boolean checkChineseCharacter(String content){
+    public static boolean checkChineseCharacter(String content) {
         if (null != content && !content.isEmpty()) {
             String regEx = "[一-龥]";
             Pattern p = Pattern.compile(regEx);
