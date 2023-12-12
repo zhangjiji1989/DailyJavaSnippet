@@ -11,11 +11,19 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * IP地址工具类
+ */
 @Slf4j
 public class IpAddressUtil {
 
     private static final String C2BA_IP = "http://c2ba.api.huachen.cn";
 
+    /**
+     * 从请求中获取IP地址
+     * @param request
+     * @return
+     */
     public static String getIpAddress(HttpServletRequest request) {
         String ip = request.getHeader("x-forwarded-for");
         if (ip == null || ip.isEmpty() || "unknown".equalsIgnoreCase(ip)) {
@@ -40,6 +48,11 @@ public class IpAddressUtil {
         return ip;
     }
 
+    /**
+     * 根据IP地址解析归属地
+     * @param ip
+     * @return
+     */
     public static String getIPRegion(String ip) {
         Map<String, String> headers = new HashMap<>();
         headers.put("Authorization", "APPCODE " + "");
