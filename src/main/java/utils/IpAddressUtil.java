@@ -59,7 +59,7 @@ public class IpAddressUtil {
                 return regionResponse.getData().getRegion();
             }
         } catch (Exception e) {
-            log.error("获取IP区域信息失败", e);
+            log.error("获取IP区域信息失败: {}", ThrowableUtils.getStackTraceByPn(e));
         }
         return "";
     }
