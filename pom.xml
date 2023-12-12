@@ -7,6 +7,7 @@
     <groupId>com.los</groupId>
     <artifactId>daily-java-snippet</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <name>Daily Java Snippet</name>
 
